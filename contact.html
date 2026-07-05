@@ -1,11 +1,224 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit</title>
+    <meta name="description" content="Inspirez-vous à l'AfrConnect Summit au Sénégal. Formulaire d'inscription, FAQ et informations pratiques.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <!-- NAVBAR -->
+     <header>
+        <nav class="navbar" id="navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="logo">AfriConnect <span>Summit</span></a>
+                <a class="navbar-brand" href="index.html">
+                  <img src="images/Logo Marketing Agency Digital..png" alt="Logo AfriConnect Summit" height="50">
+                </a>
+                <!-- Menu navigation destop-->
+                 <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">intervenants</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                 </ul>
+
+                 <div class="navbar-actions">
+                    <!-- Bonton dark/light mode-->
+                     <button id="themeToggle" class="theme-Toggle" aria-label="Changer de thème">
+                        <i class="bi bi-moon-stars-fill"></i>
+                     </button>
+
+                     <!-- Bonton menu hamburger mobile-->
+                     <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu"></button>
+                 </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO-->
+         <section class="page-hero">
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="index.html">Accueil</a> <span>/</span> <span>Contact</span>
+            </nav>
+            <h1>Inscrivez-vous au sommet</h1>
+            <p>Places limitées : réservez la vôtre dès aujourd'hui</p>
+         </section>
+
+         <!-- FORMULAIRE + INFOS-->
+          <section class="contact-section">
+            <div class="contact-wrapper">
+
+                <!-- Colonne Formulaire-->
+                <div class="contact-form-col">
+                    <form id="registerForm" novalidate>
+
+                        <div class="form-roup">
+                            <label for="fullname">Nom Complet</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                            <span class="error-message" id="error-fullname"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message" id="error-email"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="error-message" id="error-phone"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="participation">Type de participation *</label>
+                            <select id="participation" name="participation" required>
+                                <option value="">-- Choisissez une option --</option>
+                                <option value="visiteur">Visiteur</option>
+                                <option value="intervenant">Intervenant</option>
+                                <option value="exposant">Exposant</option>
+                                <option value="presse">Presse</option>
+                            </select>
+                            <span class="error-message" id="error-participation"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Pays africain *</label>
+                                <select id="country" name="country" required>
+                                    <option value="">-- Choisissez un pays --</option>
+                                    <option value="senegal">Sénégal</option>
+                                    <option value="ghana">Ghana</option>
+                                    <option value="nigeria">Nigéria</option>
+                                    <option value="kenya">Kenya</option>
+                                    <option value="rwanda">Rwanda</option>
+                                    <option value="maroc">Maroc</option>
+                                    <option value="cote-ivoire">Côte d'Ivoire</option>
+                                    <option value="afrique-sud">Afrique du Sud</option>
+                                    <option value="egypte">Égypte</option>
+                                    <option value="cameroun">Cameroun</option>
+                                    <option value="tunisie">Tunisie</option>
+                                </select>
+                            <span class="error-message" id="error-country"></span>
+                        </div>
+
+                        <div class="form-group">
+                        <label for="message">Votre motivation *</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <span class="error-message" id="error-message"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Envoyer mon inscription</button>
+
+                        <!-- Message de succès affiché en JS après validation -->
+                        <p class="success-message" id="successMessage">Votre inscription a bien été envoyée. À bientôt à Kigali !</p>
+                    </form>
+                </div>
+
+                    <!-- Colonne informations -->
+                    <aside class="contact-info-col">
+                        <h2>Informations pratiques</h2>
+                        <ul class="info-list">
+                            <li><i class="bi bi-geo-alt-fill"></i>Dakar, Sénégal </li>
+                            <li><i class="bi bi-calendar-event"></i> 12 - 14 mars 2027</li>
+                            <li><i class="bi bi-envelope-fill"></i> contact@africonnectsummit.africa</li>
+                            <li><i class="bi bi-telephone-fill"></i> +221 78 000 00 00</li>
+                        </ul>
+
+                        <!--FAQ ACCORDEON-->
+                        <div class="faq">
+                            <h2>Questions fréquentes</h2>
+                            <div class="faq-item" tabindex="0">
+                                <div class="faq-question">Le sommet est-il ouvert aux étudiants ?</div>
+                                <div class="faq-answer">
+                                    <p>Oui, un tarif réduit est proposé aux étudiants sur présentation d'une carte étudiante valide.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" tabindex="0">
+                                <div class="faq-question">Faut-il un visa pour se rendre au Rwanda ?</div>
+                                <div class="faq-answer">
+                                    <p>La majorité des nationalités africaines obtiennent un visa à l'arrivée. Vérifiez les conditions selon votre pays.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" tabindex="0">
+                                <div class="faq-question">Les sessions sont-elles enregistrées ?</div>
+                                <div class="faq-answer">
+                                    <p>Oui, toutes les sessions du Grand Amphi seront filmées et disponibles en replay après le sommet.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" tabindex="0">
+                                <div class="faq-question">Puis-je annuler mon inscription ?</div>
+                                <div class="faq-answer">
+                                    <p>Les annulations sont possibles jusqu'à 30 jours avant l'événement, avec remboursement intégral.</p>
+                                </div>
+                            </div>
+
+                            <div class="faq-item" tabindex="0">
+                                <div class="faq-question">Y a-t-il un espace pour les exposants ?</div>
+                                <div class="faq-answer">
+                                    <p>Oui, un village startups accueille les exposants dans le hall principal du centre de conférence.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+            </div>
+          </section>
+
+          <!--CARTE-->
+            <section class="map-section">
+                <h2 class="section-title reveal">Nous trouver</h2>
+                <div class="map-wrapper reveal">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.8!2d-17.4441!3d14.7745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec10d4a!2sParcelles%20Assainies%20Unit%C3%A9%209%2C%20Dakar!5e0!3m2!1sfr!2ssn"
+                        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                        title="Localisation du Kigali Convention Centre">
+                    </iframe>
+                </div>
+            </section>
+    </main>
+
+    <!-- FOOTER-->
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+            <h3>AfriConnict Summmit</h3>
+            <img src="images/Logo Marketing Agency Digital..png" alt="Logo AfriConnect Summit" height="50">
+            <p>Le rendez-vous annuel de la tech africaine. Dakar, Sénégal.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">Intervenants</a></li>
+                    <li><a href="contact.html">Inscription</a></li>
+                </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Suivez-nous</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                </div>
+        </div>
+    </div>
+    <p class="copyright">&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+
+    <!-- Bouton retour en haut -->
+    <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+</footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -1,11 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AfriConnect Summit</title>
+    <meta name="description" content="Découvrez les 48 intervenants de l'AfriConnect Summit:  développeurs, entrepreneurs et investisseurs africains.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- NAVBAR -->
+     <header>
+        <nav class="navbar" id="navbar">
+            <div class="navbar-container">
+                <a href="index.html" class="logo">AfriConnect <span>Summit</span></a>
+                <a class="navbar-brand" href="index.html">
+                  <img src="images/Logo Marketing Agency Digital..png" alt="Logo AfriConnect Summit" height="50">
+                </a>
+                <!-- Menu navigation destop-->
+                 <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="active">Accueil</a></li>
+                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="intervenants.html">intervenants</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                 </ul>
+
+                 <div class="navbar-actions">
+                    <!-- Bonton dark/light mode-->
+                     <button id="themeToggle" class="theme-Toggle" aria-label="Changer de thème">
+                        <i class="bi bi-moon-stars-fill"></i>
+                     </button>
+
+                     <!-- Bonton menu hamburger mobile-->
+                     <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu"></button>
+                 </div>
+            </div>
+        </nav>
+     </header>
     
+    <main>
+        <!-- HERO-->
+         <section class="page-hero">
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="intervenants.html">Accueil</a><span>/</span> <span>Intervenats</span>
+            </nav>
+            <h1>Nos Intervenants</h1>
+            <p>49 experts venus de tout le continent pour partah=ger le savir.</p>
+         </section>
+
+         <!-- FILTRES-->
+          <section class="speaker-section">
+            <div class="filters" id="filters">
+                <button class="filter-btn active" data-filter="tous">Tous</button>
+                <button class="filter-btn" data-filter="ia">IA &amp; Tech</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="data">Data</button>
+            </div>
+
+            <!-- GRILLE DES INTERVENANTS -->
+            <div class="speakers-full-grid" id="speakersGrid">
+                <article class="speaker-card" data-category="ia">
+                    <img src="images/Fatou_Ndiaye_IA_Researcher_202607041533.jpeg" alt="Portrait de Fatou Ndiaye">
+                    <h3>Fatou Ndiaye</h3>
+                    <p>Chercheuse en IA</p>
+                    <span class="country">Sénégal</span>
+                </article>
+
+                <article class="speaker-card" data-category="business">
+                    <img src="images/Kwame_Mensa_Fondateur_PayHub_2K_202607041534.jpeg" alt="Portrait de Kwame Mensah">
+                    <h3>Kwame Mensah</h3>
+                    <p>Fondateur, PayHub</p>
+                    <span class="country">Ghana</span>
+                </article>
+
+                <article class="speaker-card" data-category="ia">
+                    <img src="images/Amina_Diallo_CTO_Wave_Sénégal_202607041536.jpeg" alt="Portrait de Amina Diallo">
+                    <h3>Amina Diallo</h3>
+                    <p>CTO, Wave Sénégal</p>
+                    <span class="country">Sénégal</span>
+                </article>
+
+                <article class="speaker-card" data-category="business">
+                    <img src="images/David_Mwangi_Investor_Savannah_C…_202607041538 (1).jpeg" alt="Portrait de David Mwangi">
+                    <h3>David Mwangi</h3>
+                    <p>Investisseur, Savannah Capital</p>
+                    <span class="country">Kenya</span>
+                </article>
+
+                <article class="speaker-card" data-category="design">
+                    <img src="images/Zainab_Bello_Flutter_Design_2K_202607041539.jpeg" alt="Portrait de Zainab Bello">
+                    <h3>Zainab Bello</h3>
+                    <p>Directrice UX, Flutter Design</p>
+                    <span class="country">Nigéria</span>
+                </article>
+
+                <article class="speaker-card" data-category="data">
+                    <img src="images/Youssef_El_Amrani_Data_Scientist_202607041540.jpeg" alt="Portrait de Youssef El Amrani">
+                    <h3>Youssef El Amrani</h3>
+                    <p>Data Scientist en chef</p>
+                    <span class="country">Maroc</span>
+                </article>
+
+                <article class="speaker-card" data-category="business">
+                    <img src="images/Thandiwe_Nkosi_CEO_Scale_Africa_202607041541.jpeg" alt="Portrait de Thandiwe Nkosi">
+                    <h3>Thandiwe Nkosi</h3>
+                    <p>CEO, Scale Africa</p>
+                    <span class="country">Afrique du Sud</span>
+                </article>
+
+                <article class="speaker-card" data-category="ia">
+                    <img src="images/Emeka_Okafor_cybersecurity_expert_2K_202607041542.jpeg" alt="Portrait de Emeka Okafor">
+                    <h3>Emeka Okafor</h3>
+                    <p>Expert en cybersécurité</p>
+                    <span class="country">Nigéria</span>
+                </article>
+
+                <article class="speaker-card" data-category="data">
+                    <img src="images/Grace_Achieng_public_data_analyst_202607041543.jpeg" alt="Portrait de Grace Achieng">
+                    <h3>Grace Achieng</h3>
+                    <p>Analyste de données publiques</p>
+                    <span class="country">Kenya</span>
+                </article>
+            </div>
+          </section>
+<!-- FOOTER-->
+<footer>
+    <div class="footer-container">
+        <div class="footer-col">
+        <h3>AfriConnict Summmit</h3>
+        <img src="images/Logo Marketing Agency Digital..png" alt="Logo AfriConnect Summit" height="50">
+        <p>Le rendez-vous annuel de la tech africaine. Dakar, Sénégal.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Navigation</h3>
+            <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="programme.html">Programme</a></li>
+            <li><a href="intervenants.html">Intervenants</a></li>
+            <li><a href="contact.html">Inscription</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Suivez-nous</h3>
+            <div class="social-icons">
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+        </div>
+        <p class="copyright">&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
+        <!-- Bouton retour en haut -->
+        <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
+        <i class="bi bi-arrow-up"></i>
+        </button>
+    <script src="js/main.js"></script>
+    </div>
+ </footer>
 </body>
 </html>
