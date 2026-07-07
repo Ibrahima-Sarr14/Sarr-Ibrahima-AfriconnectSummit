@@ -7,7 +7,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Icones Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!-- Fichier CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,13 +18,12 @@
      <header>
         <nav class="navbar" id="navbar">
             <div class="navbar-container">
-                <a href="index.html" class="logo">AfriConnect <span>Summit</span></a>
                 <a class="navbar-brand" href="index.html">
                   <img src="images/Logo Marketing Agency Digital..png" alt="Logo AfriConnect Summit" height="50">
                 </a>
                 <!-- Menu navigation destop-->
-                 <ul class="nav-links" id="nav-links">
-                    <li><a href="index.html" class="active">Accueil</a></li>
+                 <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Accueil</a></li>
                     <li><a href="programme.html">Programme</a></li>
                     <li><a href="intervenants.html">intervenants</a></li>
                     <li><a href="contact.html">contact</a></li>
@@ -30,66 +31,83 @@
 
                  <div class="navbar-actions">
                     <!-- Bonton dark/light mode-->
-                     <button id="themeToggle" class="theme-Toggle" aria-label="Changer de thème">
+                     <button id="themeToggle" class="theme-toggle" aria-label="Changer de thème">
                         <i class="bi bi-moon-stars-fill"></i>
                      </button>
 
                      <!-- Bonton menu hamburger mobile-->
-                     <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu"></button>
+                    <button id="hamburger" class="hamburger" aria-label="Ouvrir le menu">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
                  </div>
             </div>
         </nav>
      </header>
 
 <main>
-        <!-- ====== SECTION HERO ====== -->
-    <section class="hero" id="hero">
-      <div class="hero-grid">
-        <!-- Colonne gauche : le texte -->
+    <!-- ====== SECTION HERO ====== -->
+<section class="hero" id="hero">
+    <div class="hero-grid">
+        <!-- Colonne gauche -->
         <div class="hero-text">
-          <p class="hero-eyebrow fade-in">Édition 2027 - Dakar, Sénégal</p>
-          <h1 class="hero-title fade-in">Le futur numérique de l'Afrique se construit ici.</h1>
-          <p class="hero-subtitle fade-in">3 jours pour connecter les développeurs, les entrepreneurs et les investisseurs qui font grandir la tech africaine.</p>
-
-          <div class="hero-buttons fade-in">
-            <a href="contact.html" class="btn btn-primary">S'inscrire maintenant</a>
-
-            <a href="programme.html" class="btn btn-outline">Voir le programme</a>
-          </div>
+            <p class="hero-eyebrow fade-in">
+                Édition 2027 - Dakar, Sénégal
+            </p>
+            <h1 class="hero-title fade-in">
+                Le futur numérique de l'Afrique se construit ici.
+            </h1>
+            <p class="hero-subtitle fade-in">
+                3 jours pour connecter les développeurs, les entrepreneurs et les investisseurs qui font grandir la tech africaine.
+            </p>
+            <div class="hero-buttons fade-in">
+                <a href="contact.html" class="btn btn-primary">
+                    S'inscrire maintenant
+                </a>
+                <a href="programme.html" class="btn btn-outline">
+                    Voir le programme
+                </a>
+            </div>
         </div>
 
-        <!-- Colonne droite : bloc visuel avec le compte à rebours -->
+        <!-- Colonne droite -->
         <div class="hero-visual fade-in">
-          <div class="hero-visual-shape"></div>
-          <div class="countdown-card">
-            <p class="countdown-label"><i class="bi bi-calendar-event"></i> Ouverture du sommet dans</p>
-            <!-- Compte à rebours géré en JS -->
-            <div class="countdown" id="countdown">
-              <div class="countdown-item">
-                <span id="days">00</span>
-                <p>Jours</p>
-              </div>
-              <div class="countdown-item">
-                <span id="hours">00</span>
-                <p>Heures</p>
-              </div>
-              <div class="countdown-item">
-                <span id="minutes">00</span>
-                <p>Minutes</p>
-              </div>
-              <div class="countdown-item">
-                <span id="seconds">00</span>
-                <p>Secondes</p>
-              </div>
+            <!-- Forme décorative -->
+            <div class="hero-visual-shape"></div>
+            <!-- Image -->
+            <div class="hero-right">
+                <img src="images/AfriC.jpeg" alt="Illustration AfriConnect Summit">
             </div>
-          </div>
-          <div class="hero-right">
-                <img src="images/africonnect.jpeg" alt="Illustration AfriConnect Summit">
+            <!-- Compte à rebours -->
+            <div class="countdown-card">
+                <p class="countdown-label">
+                    <i class="bi bi-calendar-event"></i>
+                    Ouverture du sommet dans
+                </p>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <p>Jours</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <p>Heures</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <p>Secondes</p>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-    </section>
-
+    </div>
+    
+</section>
         <!-- ====== SECTION CHIFFRES CLES ====== -->
     <section class="stats" id="stats">
       <div class="stats-grid">
@@ -138,32 +156,32 @@
       <div class="speakers-grid">
         <!-- Carte intervenants vedette-->
          <article class="speaker-card speaker-featured reveal">
-          <img src="images/cto amina diallo.webp" alt="Portrait Amina Diallo">
-          <span class="featured-tag">Intervenante vedette</span>
-          <h3>Amina Diallo</h3>
-          <p>CTO, Wave Sénégal</p>
-          <span class="country">Sénégal</span>
+            <img src="images/cto amina diallo.webp" alt="Portrait Amina Diallo">
+            <span class="featured-tag">Intervenante vedette</span>
+            <h3>Amina Diallo</h3>
+            <p>CTO, Wave Sénégal</p>
+            <span class="country">Sénégal</span>
          </article>
          
-         <article class="speaker-featured reveal">
-          <img src="images/PayHub.webp" alt="Portrait de Kwame Mensah">
-          <h3>Kwame Mensah</h3>
-          <p>Fondateur, PayHub Ghana</p>
-          <span class="country">Ghana</span>
+         <article class="speaker-card speaker-featured reveal">
+            <img src="images/PayHub.webp" alt="Portrait de Kwame Mensah">
+            <h3>Kwame Mensah</h3>
+            <p>Fondateur, PayHub Ghana</p>
+            <span class="country">Ghana</span>
          </article>
 
-         <article class="speaker-featured reveal">
-          <img src="images/Chercheuse IA.webp" alt="Portrait de Fatou Ndiaye">
-          <h3>Fatou Ndiaye</h3>
-          <p>Chercheuse IA, Univ. Cheikh Anta Diop</p>
-          <span class="country">Sénégal</span>
+         <article class="speaker-card speaker-featured reveal">
+            <img src="images/Chercheuse IA.webp" alt="Portrait de Fatou Ndiaye">
+            <h3>Fatou Ndiaye</h3>
+            <p>Chercheuse IA, Univ. Cheikh Anta Diop</p>
+            <span class="country">Sénégal</span>
          </article>
 
-         <article class="speaker-featured reveal">
-          <img src="images/Savannah Capital.webp" alt="Portrait de Kwame Mensah">
-          <h3>David Mwangi</h3>
-          <p>investisseur, Savannah Capital</p>
-          <span class="country">Keyna</span>
+         <article class=" speaker-card speaker-featured reveal">
+            <img src="images/Savannah Capital.webp" alt="Portrait de Kwame Mensah">
+            <h3>David Mwangi</h3>
+            <p>investisseur, Savannah Capital</p>
+            <span class="country">Keyna</span>
          </article>
       </div>
       <div class="see-more">
@@ -171,26 +189,20 @@
       </div>
     </section>
 
-    <!-- SECTION SPONSORS-->
-     <section class="sponsors" id="sponsors">
-      <h2 class="section-title reveal">Nos partenaires</h2>
-      <div class="sponsors-list">
-        <div class="sponsor-tier tier-gold reveal">
-          <p class="tier-label">Or</p>
-          <img src="images/google.webp" alt="google">
-          <img src="images/Orange.webp" alt="Orange">
-          <img src="images/Microsoft.webp" alt="Microsoft">
-          <p class="tier-label">Argent</p>
-          <img src="images/Github.webp" alt="Github">
-          <img src="images/Intel.webp" alt="Intel">
-          <img src="images/Framer.webp" alt="Framer">
-          <p class="tier-label">Bronze</p>
-          <img src="images/aws.webp" alt="AWS">
-          <img src="images/MongoDB.webp" alt="MongoDB">
-          <img src="images/Zoho.webp" alt="Zoho">
-        </div>
-      </div>
-     </section>
+    <div class="sponsors-list">
+      <div class="sponsor-tier tier-gold reveal">
+      <p class="tier-label">Or</p>
+      <img src="images/google.webp" alt="Google">
+  </div>
+  <div class="sponsor-tier tier-silver reveal">
+    <p class="tier-label">Argent</p>
+    <img src="images/Github.webp" alt="Github">
+  </div>
+  <div class="sponsor-tier tier-bronze reveal">
+    <p class="tier-label">Bronze</p>
+    <img src="images/aws.webp" alt="AWS">
+  </div>
+</div>
 </main>
 
 <!-- FOOTER-->
@@ -220,14 +232,12 @@
       </div>
     </div>
     <p class="copyright">&copy; <span id="year"></span> AfriConnect Summit. Tous droits réservés.</p>
-
+  </div>
     <!-- Bouton retour en haut -->
       <button id="backToTop" class="back-to-top" aria-label="Retour en haut">
         <i class="bi bi-arrow-up"></i>
       </button>
       </footer>
       <script src="js/main.js"></script>
-    </div>
- </footer>
 </body>
 </html>
