@@ -1,25 +1,21 @@
 /*VARIABLES CSS*/
 
 :root{
-
     /* Couleurs */
-
-    --color-primary:#F97316;
+    --color-primary:#1df916;
     --color-secondary:#14B8A6;
     --color-dark:#0F172A;
     --color-light:#F8FAFC;
     --color-white:#FFFFFF;
     --color-text:#334155;
     --color-gray:#94A3B8;
-    --color-border:#E2E8F0;
+    --color-border:#144d98;
 
     /* Polices */
-
     --font-title:'Poppins',sans-serif;
     --font-body:'Inter',sans-serif;
 
     /* Espacements */
-
     --container:1200px;
     --radius:15px;
     --shadow:0 10px 25px rgba(0,0,0,.08);
@@ -27,13 +23,11 @@
 }
 
 /* RESET*/
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
 html{
     scroll-behavior:smooth;
 }
@@ -425,9 +419,7 @@ header{
     margin-top:5px;
 }
 
-/*==================================================
-        SECTION STATISTIQUES
-==================================================*/
+/*SECTION STATISTIQUES*/
 
 .stats{
     padding:100px 8%;
@@ -460,11 +452,413 @@ header{
 .stat-number{
     font-size:3rem;
     font-weight:800;
-    color:#F97316;
+    color:#16f921;
 }
 
 .stat-card p{
     margin-top:10px;
     color:#64748B;
     font-weight:500;
+}
+
+/*TITRES DE SECTION (utilisé par why / intervenants*/
+.section-title{
+    text-align:center;
+    font-size:2.8rem;
+    margin-bottom:60px;
+    position:relative;
+}
+
+.section-title::after{
+    content:"";
+    width:80px;
+    height:5px;
+    background:var(--color-primary);
+    display:block;
+    margin:18px auto 0;
+    border-radius:50px;
+}
+
+/*POURQUOI PARTICIPER (Flexbox)*/
+
+.why{
+    background:var(--color-light);
+}
+
+.why-list{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.why-card{
+    flex:1 1 280px;
+    background:#fff;
+    border-radius:var(--radius);
+    padding:40px 30px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+    border:1px solid var(--color-border);
+}
+
+.why-card:hover{
+    transform:translateY(-8px);
+}
+
+.why-icon{
+    font-size:2.2rem;
+    color:var(--color-secondary);
+    margin-bottom:15px;
+}
+
+.why-card h3{
+    margin-bottom:10px;
+}
+
+.why-card p{
+    color:var(--color-gray);
+    font-size:.95rem;
+}
+
+/*INTERVENANTS VEDETTES (CSS Grid)*/
+
+.speakers-preview{
+    background:#fff;
+}
+
+.speakers-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.speaker-card{
+    background:#fff;
+    border-radius:var(--radius);
+    overflow:hidden;
+    text-align:center;
+    padding-bottom:20px;
+    border:1px solid var(--color-border);
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+    position:relative;
+}
+
+.speaker-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 45px rgba(0,0,0,.12);
+}
+
+.speaker-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.speaker-card h3{
+    font-size:1.1rem;
+}
+
+.speaker-card p{
+    color:var(--color-gray);
+    font-size:.9rem;
+    margin:4px 0 10px;
+}
+
+.speaker-card .country{
+    display:inline-block;
+    background:var(--color-light);
+    color:var(--color-primary);
+    font-size:.75rem;
+    font-weight:600;
+    padding:4px 14px;
+    border-radius:50px;
+}
+
+.featured-tag{
+    position:absolute;
+    top:14px;
+    left:14px;
+    background:var(--color-primary);
+    color:#fff;
+    font-size:.7rem;
+    font-weight:600;
+    padding:5px 14px;
+    border-radius:50px;
+}
+
+.see-more{
+    text-align:center;
+    margin-top:50px;
+}
+
+/*SPONSORS (Flexbox)*/
+
+.sponsors-list{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 8%;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.sponsor-tier{
+    background:#fff;
+    border-radius:var(--radius);
+    text-align:center;
+    padding:30px;
+    box-shadow:var(--shadow);
+}
+
+.tier-label{
+    color:var(--color-gray);
+    font-size:.8rem;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+
+.sponsor-tier img{
+    max-width:110px;
+    max-height:55px;
+    width:auto;
+    object-fit:contain;
+    margin:0 auto;
+}
+
+.tier-gold{
+    width:240px;
+    padding:40px 30px;
+    border:2px solid var(--color-primary);
+}
+
+.tier-silver{
+    width:210px;
+    border:2px solid var(--color-gray);
+}
+
+.tier-bronze{
+    width:190px;
+    border:2px solid #C08552;
+}
+
+/*FOOTER*/
+
+footer{
+    background:var(--color-dark);
+    color:#CBD5E1;
+    padding:60px 8% 25px;
+    position:relative;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:0 auto 30px;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.footer-col h3{
+    color:#fff;
+    margin-bottom:15px;
+    font-size:1.1rem;
+}
+
+.footer-col img{
+    width:45px;
+    margin-bottom:12px;
+    border-radius:8px;
+}
+
+.footer-col ul li{
+    margin-bottom:8px;
+}
+
+.footer-col ul li a:hover{
+    color:var(--color-primary);
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+    font-size:1.2rem;
+}
+
+.social-icons a{
+    transition:var(--transition);
+}
+
+.social-icons a:hover{
+    color:var(--color-primary);
+    transform:translateY(-3px);
+}
+
+.copyright{
+    text-align:center;
+    font-size:.85rem;
+    border-top:1px solid rgba(255,255,255,.1);
+    padding-top:20px;
+}
+
+.back-to-top{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:var(--color-primary);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    font-size:1.1rem;
+    opacity:0;
+    pointer-events:none;
+    transition:var(--transition);
+    z-index:900;
+}
+
+.back-to-top.show{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.back-to-top:hover{
+    transform:translateY(-4px);
+}
+
+/* Programme - Onglets + Tableau*/
+.schedule{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tabs{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border-radius:50px;
+    border:1px solid var(--color-border);
+    background:#fff;
+    color:var(--color-text);
+    cursor:pointer;
+    font-weight:600;
+    transition:var(--transition);
+}
+
+.tab-num{
+    font-family:var(--font-title);
+    font-size:.75rem;
+    background:var(--color-light);
+    color:var(--color-gray);
+    padding:4px 9px;
+    border-radius:6px;
+    transition:var(--transition);
+}
+
+.tab-btn.active{
+    background:var(--color-primary);
+    border-color:var(--color-primary);
+    color:#fff;
+}
+
+.tab-btn.active .tab-num{
+    background:rgba(255,255,255,.25);
+    color:#fff;
+}
+
+/* Masque les plannings des jours non sélectionnés (géré en JS) */
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.schedule-table{
+    width:100%;
+    border-collapse:collapse;
+    border-radius:var(--radius);
+    overflow:hidden;
+    margin-bottom:20px;
+}
+
+.schedule-table th,
+.schedule-table td{
+    padding:16px;
+    text-align:left;
+    font-size:.9rem;
+}
+
+.schedule-table thead{
+    background:var(--color-primary);
+    color:#fff;
+}
+
+/* Alternance de couleurs sur les lignes */
+.schedule-table tbody tr:nth-child(odd){
+    background:#fff;
+}
+
+.schedule-table tbody tr:nth-child(even){
+    background:var(--color-light);
+}
+
+/*THEMATIQUES (CSS Grid 2x2)*/  
+.themes{
+    background:var(--color-light);
+}
+
+.themes-grid{
+    max-width:800px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.theme-card{
+    background:#fff;
+    border-radius:var(--radius);
+    padding:35px;
+    border:1px solid var(--color-border);
+    box-shadow:var(--shadow);
+    transition:var(--transition);
+}
+
+.theme-card:hover{
+    transform:translateY(-6px);
+}
+
+.theme-icon{
+    font-size:1.9rem;
+    color:var(--color-primary);
+    margin-bottom:12px;
+}
+
+.theme-card p{
+    color:var(--color-gray);
+    font-size:.9rem;
+    margin-top:8px;
 }
