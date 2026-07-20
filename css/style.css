@@ -2,11 +2,11 @@
 
 :root{
     /* Couleurs */
-    --color-primary:#1df916;
-    --color-secondary:#14B8A6;
+    --color-primary:#f91625;
+    --color-secondary:#b81456;
     --color-dark:#0F172A;
     --color-light:#F8FAFC;
-    --color-white:#FFFFFF;
+    --color-white:#c52222;
     --color-text:#334155;
     --color-gray:#94A3B8;
     --color-border:#144d98;
@@ -20,6 +20,69 @@
     --radius:15px;
     --shadow:0 10px 25px rgba(0,0,0,.08);
     --transition:.35s ease;
+}
+
+/* Variables du mode sombre : le JS bascule juste l'attribut data-theme,
+   c'est ce bloc qui redéfinit les couleurs en conséquence */
+[data-theme="dark"]{
+    --color-light:#0B1120;
+    --color-text:#E2E8F0;
+    --color-border:#3d914b;
+}
+
+/* Les titres utilisent var(--color-dark) comme couleur de texte,et --color-dark reste identique (utilisé aussi pour la navbar/hero qui doivent rester sombres) donc on force les titres en clair ici */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4{
+    color:#F8FAFC;
+}
+
+/* Cartes et blocs à fond blanc codé en dur : on les fait passer
+   en sombre aussi quand le dark mode est actif */
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .why-card,
+[data-theme="dark"] .speaker-card,
+[data-theme="dark"] .sponsor-tier,
+[data-theme="dark"] .tab-btn,
+[data-theme="dark"] .theme-card,
+[data-theme="dark"] .filter-btn,
+[data-theme="dark"] .stats,
+[data-theme="dark"] .speakers-preview{
+    background:#17223B;
+}
+
+/* Les champs de formulaire aussi */
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea{
+    background:#17223B;
+    color:#E2E8F0;
+}
+
+/* Le fond légèrement gris (var(--color-light)) devient très sombre
+   en dark mode (déjà fait plus haut), mais certaines sections
+   utilisent #fff en dur pour se démarquer du fond gris clair :
+   on les repasse en une teinte un peu plus claire que le fond */
+[data-theme="dark"] .schedule-table thead{
+    background:var(--color-primary);
+}
+
+[data-theme="dark"] .schedule-table tbody tr:nth-child(odd){
+    background:#17223B;
+}
+
+[data-theme="dark"] .schedule-table tbody tr:nth-child(even){
+    background:#0B1120;
+}
+
+/* Les textes gris clairs (var(--color-gray)) restent lisibles,
+   mais le texte "normal" (var(--color-text)) doit s'éclaircir */
+[data-theme="dark"] p,
+[data-theme="dark"] .why-card p,
+[data-theme="dark"] .speaker-card p,
+[data-theme="dark"] .theme-card p{
+    color:#CBD5E1;
 }
 
 /* RESET*/
@@ -424,7 +487,7 @@ header{
 
 .stats{
     padding:100px 8%;
-    background:#fff;
+    background:#c32424;
 }
 
 .stats-grid{
@@ -436,13 +499,13 @@ header{
 }
 
 .stat-card{
-    background:#fff;
+    background:#b81818;
     border-radius:25px;
     padding:40px 30px;
     text-align:center;
     box-shadow:0 15px 35px rgba(0,0,0,.08);
     transition:.35s;
-    border:1px solid #EDF2F7;
+    border:1px solid #1866b5;
 }
 
 .stat-card:hover{
@@ -453,12 +516,12 @@ header{
 .stat-number{
     font-size:3rem;
     font-weight:800;
-    color:#16f921;
+    color:#f0125cc9;
 }
 
 .stat-card p{
     margin-top:10px;
-    color:#64748B;
+    color:#1657b4;
     font-weight:500;
 }
 
