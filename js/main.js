@@ -26,23 +26,6 @@ document.addEventListener("DOMContentLoaded", function(){
         if(iconTheme) iconTheme.className = "bi bi-sun-fill";
       }
     });
-    // ---- menu hamburger mobile ----
-  const burger = document.getElementById("hamburger");
-  const menu = document.getElementById("navLinks");
-  if(burger && menu){
-    burger.addEventListener("click", function(){
-      burger.classList.toggle("open");
-      menu.classList.toggle("open");
-    });
-    // on ferme le menu si on clique sur un des liens
-    const liens = menu.querySelectorAll("a");
-    for(let i=0; i<liens.length; i++){
-      liens[i].addEventListener("click", function(){
-        burger.classList.remove("open");
-        menu.classList.remove("open");
-      });
-    }
-  }
   }
 
   // ---- navbar qui change quand on scroll ----
