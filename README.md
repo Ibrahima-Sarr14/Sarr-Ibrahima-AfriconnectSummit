@@ -15,7 +15,7 @@ Le site comporte 4 pages :
 
 ## Technologies utilisées
 - HTML5 sémantique
-- CSS3 (variables CSS, Flexbox, Grid, dark mode, animations au scroll, responsive)
+- CSS3 (variables CSS, Flexbox, Grid, dark mode, animations au scroll, responsive) 
 - JavaScript vanilla (aucun framework, aucune librairie)
 - Google Fonts (Poppins + Inter)
 - Bootstrap Icons (CDN)
@@ -42,7 +42,7 @@ Le site est testé et adapté sur 3 breakpoints :
 -Desktop (1200px et plus).
 
 ## Lien GitHub Pages
-https://github.com/Ibrahima-Sarr14/Sarr-Ibrahima-AfriconnectSummit
+https://ibrahima-sarr14.github.io/Sarr-Ibrahima-AfriconnectSummit/
 
 ## Ressources consultées
 - MDN Web Docs (https://developer.mozilla.org/fr/)
